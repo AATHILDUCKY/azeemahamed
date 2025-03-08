@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "category": "Web Design",
+    "title": "Portfolio Website",
+    "description": "A clean and modern portfolio design.",
+    "image": "https://via.placeholder.com/300x200",
+    "link": "https://example.com/portfolio",
+    "rating": 90
+  },
+  {
+    "id": 2,
+    "category": "Mobile App",
+    "title": "Task Manager App",
+    "description": "A productivity-focused task management app.",
+    "image": "https://via.placeholder.com/300x200",
+    "link": "https://example.com/task-manager",
+    "rating": 80
+  },
+  {
+    "id": 3,
+    "category": "Web Development",
+    "title": "E-commerce Platform",
+    "description": "A fully-featured online store.",
+    "image": "https://via.placeholder.com/300x200",
+    "link": "https://example.com/ecommerce",
+    "rating": 95
+  }
+]

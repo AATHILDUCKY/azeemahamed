@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Listing</title>
+    <script src="script.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #0e1015;
+        color: white;
+      }
+      .project-card:hover {
+        border-color: #00ff00;
+        box-shadow: 0 0 10px #00ff00;
+      }
+      .filter-button {
+        cursor: pointer;
+      }
+      .filter-button:hover {
+        background-color: #1a1c23;
+      }
+      /* Scrollable Filter Bar */
+      .filter-bar {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+      /* Hide scrollbar */
+      .filter-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-bar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <header class="text-center mb-8">
+      <h1 class="text-2xl md:text-5xl font-bold text-blue-500 mb-4">
+        My Graphic Designing Projects
+      </h1>
+
+      <p class="text-lg text-gray-300">Unlocking Creativity</p>
+      <p class="text-lg text-gray-300">Crafting Innovative Solutions</p>
+      <p class="text-lg text-gray-300">Designs that Stand Out</p>
+    </header>
+
+    <div class="mb-4 filter-bar overflow-x-auto flex gap-2">
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="All Project"
+      >
+        All Project
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="Web Design"
+      >
+        Web Design
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="Logo Design"
+      >
+        Logo Design
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="Marketing & Advertising Design"
+      >
+        Marketing & Advertising Design
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="Packaging Design"
+      >
+        Packaging Design
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="Publication Design"
+      >
+        Publication Design
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="UI Design"
+      >
+        UI Design
+      </button>
+      <button
+        class="filter-button bg-gray-800 py-2 px-4 rounded"
+        data-filter="Motion Graphics"
+      >
+        Motion Graphics
+      </button>
+    </div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+      id="projects-container"
+    >
+      <!-- Project cards will be inserted here by JavaScript -->
+    </div>
+    <div class="flex justify-center mt-6">
+      <button
+        id="see-more-btn"
+        class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 mb-20 mt-10"
+      >
+        See More
+      </button>
+    </div>
+  </body>
+</html>

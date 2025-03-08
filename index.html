@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="stylesheet" href="/src/" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--smooth scroll-->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--this links for goole fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--popin google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--this link for gsap animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!--aaaaaaaaaaaaaaaaa-->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+
+  <body style="background-color: #0e1015; overflow-x: hidden">
+    <header>
+      <nav class="fixed w-full top-0 left-0 z-20">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3"
+        >
+          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <span
+              class="self-center text-2xl font-semibold glowing-text text-gray-300 sm:pl-2 md:pl-2"
+              >AZEEM AHAMED</span
+            >
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="hamb-icon inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 mr-3"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div
+            class="mobile-menu hidden w-full md:block md:w-auto"
+            id="navbar-default"
+          >
+            <ul
+              class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-10 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:mr-6 lg:mr-10 md:border-none md:bg-opacity-0 bg-gray-300"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 px-3 text-black hover:text-white md:text-gray-200 md:bg-opacity-0 md:border-none md:hover:text-white hover:bg-gray-900 rounded-md"
+                  data-page="/pages/home.html"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-black hover:text-white md:text-gray-200 md:bg-opacity-0 md:border-none md:hover:text-white hover:bg-gray-900 rounded-md"
+                  data-page="/pages/about.html"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-black hover:text-white md:text-gray-200 md:bg-opacity-0 md:border-none md:hover:text-white hover:bg-gray-900 rounded-md"
+                  data-page="/pages/projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-black hover:text-white md:text-gray-200 md:bg-opacity-0 md:border-none md:hover:text-white hover:bg-gray-900 rounded-md"
+                  data-page="/pages/services.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-black hover:text-white md:text-gray-200 md:bg-opacity-0 md:border-none md:hover:text-white hover:bg-gray-900 rounded-md"
+                  data-page="/pages/pricing.html"
+                  >Pricing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-black hover:text-white md:text-gray-200 md:bg-opacity-0 md:border-none md:hover:text-white hover:bg-gray-900 rounded-md"
+                  data-page="/pages/contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="body_set">
+      <!-- Default content here -->
+      <div class="text-center text-white">Welcome to AZEEM's Website!</div>
+    </main>
+
+    <footer class="md:mt-32">
+      <div class="footer-nav-bar md:pr-10 md:pl-10 mt-20 mb-10 text-sm">
+        <div class="footer-nav text-white md:flex md:justify-between">
+          <div class="div1 poppins-medium text-center md:text-left mb-10">
+            <a href="#" class="glowing-text">POWERED BY AZEEM</a>
+          </div>
+          <div class="div2 poppins-medium text-center md:flex">
+            <div class="pr-2 pl-2 pb-2 glowing-text">
+              <a href="#" class="glowing-text">STYLE GUIDE</a>
+            </div>
+            <div class="pr-2 pl-2 pb-2 glowing-text">
+              <a href="#">LICENSES</a>
+            </div>
+            <div class="pr-2 pl-2 pb-2 glowing-text">
+              <a href="#">CHANGELOG</a>
+            </div>
+            <div class="pr-2 pl-2 pb-2 glowing-text">
+              <a href="#">SUPPORT</a>
+            </div>
+          </div>
+          <div
+            class="div3 poppins-medium text-center md:text-left mt-10 md:mt-0"
+          >
+            <a href="#" class="glowing-text">©AATHIL DUCKY</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        // Load the default home page content and highlight the Home link
+        $("main.body_set").load("/pages/home.html");
+        $("a[data-page='/pages/home.html']").addClass(
+          "bg-purple-600 text-white"
+        );
+
+        // Toggle mobile menu
+        $(".hamb-icon").click(function () {
+          $(".mobile-menu").slideToggle();
+        });
+
+        // Load content into the main section and highlight the active link
+        $("a[data-page]").click(function (e) {
+          const pageUrl = $(this).data("page");
+
+          // Check if the Home link is clicked
+          if (pageUrl === "/pages/home.html") {
+            // Reload the page
+            location.reload();
+            return;
+          }
+
+          e.preventDefault(); // Prevent default link behavior
+
+          // Load the corresponding page content
+          $("main.body_set").load(pageUrl);
+
+          // Remove active class from all links and add to the clicked link
+          $("a[data-page]").removeClass("bg-purple-600 text-white");
+          $(this).addClass("bg-purple-600 text-white");
+        });
+      });
+    </script>
+  </body>
+</html>
