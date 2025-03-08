@@ -8,7 +8,7 @@ let currentIndex = 0; // Track current index for "Show More" functionality
 const projectsPerPage = 9; // Number of projects to display by default
 
 // Fetch JSON Data
-fetch("/src/projects.json")
+fetch("https://raw.githubusercontent.com/AATHILDUCKY/azeemahamed/refs/heads/main/src/projects.json")
   .then((res) => res.json())
   .then((data) => {
     // Sort projects by rating in descending order

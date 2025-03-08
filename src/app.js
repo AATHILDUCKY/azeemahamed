@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loadContent = (page) => {
-    fetch(`/pages/${page}.html`)
+    fetch(`https://raw.githubusercontent.com/AATHILDUCKY/azeemahamed/refs/heads/main/pages/${page}.html`)
       .then((response) => response.text())
       .then((data) => {
         document.getElementById("main-content").innerHTML = data;
